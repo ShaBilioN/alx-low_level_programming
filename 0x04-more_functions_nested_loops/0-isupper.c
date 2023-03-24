@@ -1,8 +1,6 @@
-#include "main.c"
-#include <stdio.h>
+    int c;
 
-int main(void)
-{
+    scanf("%c",&c);
 	if (c >= 65 && c <= 90)
 	{
 		return (1);
@@ -11,4 +9,3 @@ int main(void)
 	{
 		return (0);
 	}
-}
