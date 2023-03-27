@@ -7,16 +7,16 @@
  */
 void print_rev(char *s)
 {
-  int count = 0;
-  while (*(str + count) != '\0')
-  {
-    count++;
-  }
-  count--;
-  while (count >= 0)
-  {
-    putchar(*(str + count));
+    int count = 0;
+    while (*(str + count) != '\0')
+    {
+        count++;
+    }
     count--;
-  }
-  printf("\n");
+    while (count >= 0)
+    {
+        putchar(*(str + count));
+        count--;
+    }
+    printf("\n");
 }
