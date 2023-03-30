@@ -6,22 +6,22 @@
  * @n: amount of bytes from src.
  * Return: the pointer to dest.
  */
-
-char *_strncat(char *s1,char *s2,int n)
+char *_strncat(char *dest, char *src, int n)
 {
-    int i = 0, count = 0, count2 = 0;
+	int count = 0, count2 = 0;
 
-    while (*(s1 + i) != '\0')
-    {
-        i++;
-    }
+	while (*(dest + count) != '\0')
+	{
+		count++;
+	}
 
-    while (count2 < n && *(s2 + count) != '\0')
-    {
-        *(s1 + i) = *(s2 + count);
-        i++;
-        count++;
-        count2++;
-    }
-    return (s1);
+	while (count2 < n)
+	{
+		*(dest + count) = *(src + count2);
+		if (*(src + count2) == '\0')
+			break;
+		count++;
+		count2++;
+	}
+	return (dest);
 }
