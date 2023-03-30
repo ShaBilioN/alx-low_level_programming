@@ -5,20 +5,22 @@
  * @src: source.
  * Return: the pointer to dest.
  */
-char *_strcat(char *s1,char *s2)
+char *_strcat(char *dest, char *src)
 {
-	int i = 0, count = 0;
+	int count = 0, count2 = 0;
 
-	while (*(s1 + i) != '\0')
+	while (*(dest + count) != '\0')
 	{
-		i++;
-	}
-
-	while (*(s2 + count) != '\0')
-	{
-		*(s1 + i) = *(s2 + count);
-		i++;
 		count++;
 	}
-	return (s1);
+
+	while (count2 >= 0)
+	{
+		*(dest + count) = *(src + count2);
+		if (*(src + count2) == '\0')
+			break;
+		count++;
+		count2++;
+	}
+	return (dest);
 }
