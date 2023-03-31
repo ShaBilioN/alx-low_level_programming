@@ -6,17 +6,18 @@
  */
 char *cap_string(char *s1)
 {
-    int i = 1;
-
+    int i = 0,count;
+    char sep_op[] = {32, 9, 10, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
 	while (s1[i] != '\0')
     {
-        if (s1[i] >= 97 && s1[i] <= 122)
+        for (count = 0; count < 13; count++)
         {
-            if (s1[i - 1] == ' ' || s1[i - 1] == '.' || s1[i-1] == '\n')
-                s1[i] = s1[i] - 32;
-            else if (s1[i - 1] == '\t')
-                s1[i] = s1[i] - 32;
-            
+            if (s1[i] == sep_op[count])
+            {
+                if(s1[i + 1] >= 97 && s1[i + 1] <= 122)
+                    s1[i + 1] = s1[i + 1] - 32;
+                break;
+            }
         }
         i++;
     }
