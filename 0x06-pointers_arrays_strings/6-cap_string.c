@@ -8,7 +8,7 @@
 char *cap_string(char *s)
 {
     int i = 0,count;
-    char sep_op[] = {32, 9, 10, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
+    char sep_op[] = {9, 10, 32, 33, 34, 40, 41, 44, 46, 59, 63, 123, 125};
 	while (s[i] != '\0')
     {
         for (count = 0; count < 13; count++)
