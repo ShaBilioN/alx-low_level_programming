@@ -1,5 +1,5 @@
 #include "main.h"
-include <stdlib.h>
+#include <stdlib.h>
 
 /**
  * ch_free_grid - frees a 2 dimensional array.
