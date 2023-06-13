@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 /**
 *main -  returns a pointer to a newly allocated space in memory.
 *@str: string.
