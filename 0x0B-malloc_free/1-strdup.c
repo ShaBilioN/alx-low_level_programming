@@ -7,10 +7,11 @@
 */
 char *_strdup(char *str)
 {
-	unsigned int i, size = 0;
+	unsigned int i, size;
 	char *A;
 
 	i = 0;
+	size = 0;
 	while (str[i] != '\0')
 	{
 		size++;
