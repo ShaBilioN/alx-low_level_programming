@@ -3,22 +3,22 @@
 /**
 * create_array - creates an array of chars.
 * @size: the size of the array
-* @char: the first element in the array
+* @c: the first element in the array
 *
 * Return:  pointer to the array
 */
 char *create_array(unsigned int size, char c)
 {
-    unsigned int i;
-    char *A;
+	unsigned int i;
+	char *A;
 
-    if (size <= 0)
-        return (NULL);
-    
-    A = malloc(sizeof(c) * size);
+	if (size <= 0)
+		return (NULL);
 
-    for (i = 0; i < size; i++)
-        A[i] = c;
+	A = malloc(sizeof(c) * size);
 
-    return (A);
+	for (i = 0; i < size; i++)
+		A[i] = c;
+
+	return (A);
 }
